@@ -1,0 +1,52 @@
+@use '../../scss' as *;
+
+.nav {
+    z-index: 100;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0;
+    //background-color: #000;
+    @include theme("background-color", "acc");
+    color: #fff;
+    transition: height 0.4s cubic-bezier(.5, 0, .5, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+        font-weight: 600;
+        text-transform: capitalize;
+        opacity: 0;
+        transition: opacity 0.2s;
+        transition-delay: 0.4s;
+    }
+
+}
+
+.nav--delay {
+    span {
+        transition-delay: 0.1s;
+    }
+}
+
+.nav--add {
+    height: 100%;
+
+    span {
+        opacity: 1;
+    }
+
+}
+
+.nav--remove {
+    top: 0;
+    bottom: initial;
+    height: 0;
+
+    span {
+        opacity: 0;
+    }
+
+}

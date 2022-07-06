@@ -1,0 +1,75 @@
+@use '../../scss' as *;
+
+.works {
+    padding: 2rem 1rem;
+    @include theme('background', 'bck');
+    @include theme('color', 'txt');
+
+    @include mq(sm) {
+        padding: 2.5rem 2rem;
+    }
+
+    @include mq(md) {
+        padding: 3rem 4rem;
+    }
+
+    @include mq(lg) {
+        padding: 4rem 8rem;
+    }
+
+    .works__title {
+        margin-block-end: 1em;
+    }
+
+    .works__filters {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 1rem;
+        margin-block-end: 4rem;
+
+        li {
+            border-width: 1px;
+            border-style: solid;
+            @include theme("border-color", "border");
+            border-radius: 2rem;
+            padding: 1em 1.5em;
+            font-weight: 500;
+            letter-spacing: 0.05em;
+            text-transform: capitalize;
+            cursor: pointer;
+        }
+
+        .active {
+            @include theme('background-color', 'acc');
+            border: none;
+        }
+
+    }
+
+    .works__content {
+        display: flex;
+        flex-flow: column;
+        gap: 4rem 0rem;
+        margin-block-end: 2.5rem;
+
+        @include mq(lg) {
+            flex-flow: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            > * {
+                width: 47.5%;
+            }
+        
+        }
+
+    }
+
+    .works__link {
+        font-weight: 500;
+        @extend %hoverBorderAnimation;
+    }
+
+}

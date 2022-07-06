@@ -1,0 +1,48 @@
+@use '../../scss' as *;
+
+.footer {
+    padding: 1rem;
+    @include theme('background', 'bck');
+    @include theme('color', 'txt');
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    @include theme('border-color', 'border2');
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(sm) {
+        padding-inline: 2rem;
+    }
+
+    @include mq(md) {
+        padding: 1rem 4rem;
+    }
+
+    @include mq(lg) {
+        padding: 1rem 8rem;
+    }
+
+    .footer__info {
+
+        .footer__logo {
+            display: block;
+            margin-block-end: 1rem;
+        }
+
+        .footer__copyright {
+            font-size: 0.9rem;
+        }
+
+    }
+
+    .footer__socials {
+
+        img {
+            width: clamp(1.5rem, 5vw, 2rem);
+            cursor: pointer;
+            margin-inline-end: 0.5rem;
+        }
+
+
+    }
+}

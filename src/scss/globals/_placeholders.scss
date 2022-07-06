@@ -1,0 +1,25 @@
+@use 'mixins' as *;
+
+%hoverBorderAnimation {
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+        position: absolute;
+        right: 0;
+        width: 0;
+        height: 2px;
+        content: '';
+        display: block;
+        @include theme("background-color", "acc");
+        transition: width 0.25s linear;
+    }
+
+    &:hover {
+        &::after {
+            left: 0;
+            width: 100%;
+        }
+    }
+
+}

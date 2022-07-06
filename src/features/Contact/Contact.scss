@@ -1,0 +1,132 @@
+@use '../../scss' as *;
+
+.contact {
+    padding: 2rem 1rem;
+    @include theme('background', 'bck');
+    @include theme('color', 'txt');
+
+    @include mq(sm) {
+        padding: 2.5rem 2rem;
+    }
+
+    @include mq(md) {
+        padding: 3rem 4rem;
+    }
+
+    @include mq(lg) {
+        padding: 4rem 8rem;
+    }
+
+    .contact__title {
+        margin-block-end: 1.25em;
+    }
+
+    .contact__content {
+        display: flex;
+        flex-flow: column;
+        gap: 5rem;
+        margin-block-end: 5rem;
+
+        @include mq(lg) {
+            flex-flow: row;
+            justify-content: space-between;
+            gap: 0;
+        }
+    }
+
+    .form {
+
+        @include mq(md) {
+            width: 60%;
+        }
+
+        @include mq(lg) {
+            width: 50%;
+        }
+
+        label {
+            display: block;
+            border-style: solid;
+            border-width: 0 0 1px;
+            @include theme("border-color", "border");
+            margin-block-end: 2rem;
+            transition: border 0.25s;
+
+            &:focus-within {
+                border-color: #bc2a35;
+            }
+
+            input, textarea {
+                border: none;
+                outline: none;
+                width: 100%;
+                padding: 1rem 0;
+                background: none;
+                color: inherit;
+            }
+
+            textarea {
+                height: 8rem;
+                resize: none;
+            }
+            
+        }
+
+        .form__err {
+            color: #f00;
+            font-size: 0.65em;
+        }
+
+        .form__btn {
+            display: block;
+            margin: auto;
+
+            @include mq(md) {
+                margin: 0;
+            }
+
+        }
+
+    }
+
+    hr {
+        width: 100%;
+        border-width: 1px 0 0;
+        @include theme("border-color", "border");
+
+        @include mq(lg) {
+            display: none;
+        }
+    }
+
+    .contact__links {
+        width: fit-content;
+        margin: auto;
+        // border-width: 1px 0 0;
+        // border-style: solid;
+        // @include theme("border-color", "border");
+        
+        @include mq(lg) {
+            width: 30%;
+            margin: 0;
+        }
+
+        > * {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-block-end: 1.5rem;
+            
+            img {
+                width: clamp(1.25rem, 5vw, 1.75rem);
+            }
+
+            a, span {
+                @extend %hoverBorderAnimation;
+            }
+        
+        }
+
+    }
+
+}

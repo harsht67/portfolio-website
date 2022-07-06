@@ -1,0 +1,21 @@
+@use 'mixins' as *;
+
+html {
+    // scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    transition: all 0.25s;
+    transition-property: background-color, color;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'epilogue', 'aria'; 
+}

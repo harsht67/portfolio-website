@@ -1,0 +1,90 @@
+@use '../../scss' as *;
+
+.work {
+    padding: 2rem 1rem;
+    @include theme('background', 'bck');
+    @include theme('color', 'txt');
+    display: flex;
+    flex-flow: column;
+    gap: 2.5rem;
+
+    @include mq(sm) {
+        padding: 2.5rem 2rem;
+    }
+
+    @include mq(md) {
+        padding: 3rem 4rem;
+    }
+
+    @include mq(lg) {
+        padding: 4rem 8rem;
+    }
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .work__title {
+        text-transform: capitalize;
+        font-weight: 500;
+    }
+
+    .work__subtitle {
+        margin-block-end: 0.25rem;
+    }
+
+    .work__links {
+        display: flex;
+        gap: 0.5em;
+
+        a {
+            padding: 0.25em;
+            @include theme("background-color", "bck-op");
+            @include theme("color", "acc");
+            text-decoration: none;
+            border-radius: 50%;
+        }
+    
+    }
+
+    .work__stack {
+
+        ul {
+            margin-block-start: 0.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            @include mq(lg) {
+                gap: 1rem;
+            }
+
+        }
+
+        li {
+            padding: 1em 1.5em;
+            font-weight: 500;
+            letter-spacing: 0.035em;
+            text-transform: uppercase;
+            border-radius: 2rem;
+            border-width: 1px;
+            border-style: solid;
+            @include theme("border-color", "border");
+            @include theme("color", "txt");
+        }
+    }
+
+    .work__img {
+        margin-block-start: 2rem;
+        width: 100%;
+
+        @include mq(lg) {
+            margin-block-start: 4rem;
+        }
+
+    }
+
+}
