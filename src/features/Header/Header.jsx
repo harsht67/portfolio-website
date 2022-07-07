@@ -46,9 +46,19 @@ function Header(props) {
 
                     <div className="content__socials">
 
-                        <img src={images.github} alt="github img" />
+                        <a 
+                            href="https://github.com/harsht67"
+                            target="_blank"
+                        >
+                            <img src={images.github} alt="github img" />
+                        </a>
 
-                        <img src={images.linkedin} alt="linkedin img" /> 
+                        <a 
+                            href="https://linkedin.com/in/harsht67"
+                            target="_blank"
+                        >
+                            <img src={images.linkedin} alt="linkedin img" /> 
+                        </a>
 
                     </div>
 

@@ -32,19 +32,29 @@ function Footer() {
 
             <section className="footer__socials">
 
-                <motion.img 
-                    src={images.github} 
-                    alt="github image" 
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.1 }}    
-                />
+                <a
+                    href="https://github.com/harsht67"
+                    target="_blank"
+                >
+                    <motion.img 
+                        src={images.github} 
+                        alt="github image" 
+                        whileHover={{ scale: [1, 1.1] }}
+                        transition={{ duration: 0.1 }}    
+                    />
+                </a>
 
-                <motion.img 
-                    src={images.linkedin} 
-                    alt="linkedin image" 
-                    whileHover={{ scale: [1, 1.1] }}
-                    transition={{ duration: 0.1 }}
-                />
+                <a
+                    href="https://linkedin.com/in/harsht67"
+                    target="_blank"
+                >
+                    <motion.img 
+                        src={images.linkedin} 
+                        alt="linkedin image" 
+                        whileHover={{ scale: [1, 1.1] }}
+                        transition={{ duration: 0.1 }}
+                    />
+                </a>
 
             </section>
 

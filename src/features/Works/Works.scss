@@ -68,6 +68,9 @@
     }
 
     .works__link {
+        display: block;
+        width: fit-content;
+        margin-block-start: 7.5rem;
         font-weight: 500;
         @extend %hoverBorderAnimation;
     }

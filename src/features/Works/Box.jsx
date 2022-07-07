@@ -16,11 +16,16 @@ function Box({data}) {
 
             <div className="box__img">
                 
-                <div 
-                    style={{backgroundImage: `url(${urlFor(imgurl)})`}}
+                {/* <div 
+                    style={{backgroundImage: `url(${urlFor(imgurl[0])})`}}
                     className="img"
                 >
-                </div>
+                </div> */}
+
+                <img
+                    src={urlFor(imgurl[0])}
+                    className="img"
+                />
 
                 <motion.div
                     className="hover"
@@ -29,7 +34,7 @@ function Box({data}) {
                 >
 
                     <motion.div
-                        className="hover__item f5"
+                        className="hover__item f6"
                         whileHover={{ scale: [1, 0.9] }}
                         transition={{ duration: 0.15 }}
                     >
@@ -41,7 +46,7 @@ function Box({data}) {
 
 
                     <motion.a 
-                        className="hover__item f5"
+                        className="hover__item f6"
                         href={live} 
                         target="_blank" 
                         whileHover={{ scale: [1, 0.9] }}
@@ -53,7 +58,7 @@ function Box({data}) {
                     </motion.a>
 
                     <motion.a 
-                        className="hover__item f5"
+                        className="hover__item f6"
                         href={github}
                         target="_blank"
                         whileHover={{ scale: [1, 0.9] }}
@@ -70,21 +75,21 @@ function Box({data}) {
             
             <section className="box__text">
 
-                <h2 className="box__name f4">
+                <h2 className="box__name f5">
                     {name}
                 </h2>
 
-                <p className="box__desc text">
+                <p className="box__desc sm-text">
                     {desc}
                 </p>
 
-                <ul className="box__stack ul sm-text">
+                {/* <ul className="box__stack ul sm-text">
                     { stack && stack.map(s => (
                         <li>
                             {s}
                         </li>
                     )) }
-                </ul>
+                </ul> */}
 
             </section>
    

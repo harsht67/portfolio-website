@@ -190,7 +190,9 @@ function Contact() {
                             
                             <img src={images.mail} alt="mail image" /> 
                         
-                            <span>harshtomar@gmail.com</span>
+                            <a href="mailto:harsh@gmail.com">
+                                harshtomar67tb@gmail.com
+                            </a>
 
                         </div>
 
@@ -198,7 +200,12 @@ function Contact() {
                             
                             <img src={images.github} alt="github image" /> 
 
-                            <span>github.harshtomar.com</span>
+                            <a
+                                href="https://github.com/harsht67"
+                                target="_blank"
+                            >
+                                github.harsht67
+                            </a>
 
                         </div>
                         
@@ -206,7 +213,12 @@ function Contact() {
                             
                             <img src={images.linkedin} alt="linkedin image" /> 
                         
-                            <span>linkedin.harshtomar.com</span>
+                            <a
+                                href="https://linkedin.com/in/harsht67"
+                                target="_blank"
+                            >
+                                linkedin.harsht67
+                            </a>
 
                         </div>
 

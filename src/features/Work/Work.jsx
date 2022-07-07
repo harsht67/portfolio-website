@@ -4,7 +4,9 @@ import './Work.scss'
 import { useParams } from 'react-router'
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { AiFillGithub, AiOutlineLink } from 'react-icons/ai'
+import { MdOutlineKeyboardArrowRight, MdOutlineKeyboardArrowLeft } from 'react-icons/md'
 
 import { client, urlFor } from '../../client'
 
@@ -13,6 +15,8 @@ function Work() {
     const { name } = useParams()
 
     const [work, setWork] = useState({})
+
+    const [x, setX] = useState(0)
 
     useEffect(() => {
         const query = '*[_type == "works"]'
@@ -29,10 +33,34 @@ function Work() {
             
     }, [])
 
+    const moveLeft = () => {
+        x>0 
+          ? setX(prev => prev-100)
+          : setX(prev => (imgurl.length-1)*100)
+      }
+    
+      const moveRight = () => {
+        x<(imgurl.length-1)*100 
+          ? setX(prev => prev+100)
+          : setX(prev => 0)
+      }
+
     const { github, live, desc, stack, imgurl } = work 
 
     return (
         <div className="work">
+
+            <motion.div
+                className="work__backBtn f4"
+                whileHover={{ scale: [1, 0.9] }}
+                transition={{ duration: 0.15 }}
+            >
+
+                <Link to="/work">
+                    <MdOutlineKeyboardArrowLeft/>
+                </Link>
+
+            </motion.div>
 
             <header>
             
@@ -74,7 +102,7 @@ function Work() {
                     Summary
                 </h2>
 
-                <p className="lg-text">
+                <p className="text">
                     
                     {desc && desc}
                 
@@ -98,13 +126,47 @@ function Work() {
             
             </section>
 
-            { imgurl &&
-                <img
-                    src={urlFor(imgurl)}
-                    alt="screenshot"
-                    className="work__img"
-                />
-            }
+            <section className="work__img">
+
+                <div
+                    className="img__btn f2"
+                    onClick={moveLeft}
+                >
+                    <MdOutlineKeyboardArrowLeft/>
+                    <MdOutlineKeyboardArrowLeft/>
+                </div>
+                
+                <div className="img__container">
+                
+                    <div 
+                        className="img__imgs"
+                        style={{transform: `translateX(-${x}%)`}}
+                    >
+                
+                    { imgurl &&
+                        imgurl.map(img => (
+                            <img
+                                key={img}
+                                src={urlFor(img)}
+                                alt="screenshot"
+                                className="img__img"
+                            />
+                        ))
+                    }     
+
+                    </div>
+                
+                </div>
+
+                <div
+                    className="img__btn f2"
+                    onClick={moveRight}
+                >
+                    <MdOutlineKeyboardArrowRight/>
+                    <MdOutlineKeyboardArrowRight/>
+                </div>
+
+            </section>  
 
         </div>
     )
