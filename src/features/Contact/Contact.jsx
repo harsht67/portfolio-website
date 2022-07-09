@@ -118,7 +118,7 @@ function Contact() {
                                 value={name}
                                 onChange={changeHandler}
                                 onBlur={handleBlur}
-                                placeholder='harsh tomar'
+                                placeholder='harsh'
                             />
 
                             {touched.name && errors.name 
@@ -156,7 +156,7 @@ function Contact() {
                                 value={msg}
                                 onChange={changeHandler}
                                 onBlur={handleBlur}
-                                placeholder='lorem ispum...'
+                                placeholder='hello lorem ispum...'
                             />
 
                             {touched.msg && errors.msg
@@ -190,8 +190,8 @@ function Contact() {
                             
                             <img src={images.mail} alt="mail image" /> 
                         
-                            <a href="mailto:harsh@gmail.com">
-                                harshtomar67tb@gmail.com
+                            <a href="mailto:contact.harsht67@gmail.com">
+                                contact.harsht67@gmail.com
                             </a>
 
                         </div>
@@ -204,7 +204,7 @@ function Contact() {
                                 href="https://github.com/harsht67"
                                 target="_blank"
                             >
-                                github.harsht67
+                                github.com/harsht67
                             </a>
 
                         </div>
@@ -217,7 +217,7 @@ function Contact() {
                                 href="https://linkedin.com/in/harsht67"
                                 target="_blank"
                             >
-                                linkedin.harsht67
+                                linkedin.com/in/harsht67
                             </a>
 
                         </div>

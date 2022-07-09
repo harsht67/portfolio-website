@@ -15,12 +15,6 @@ function Box({data}) {
         <div className="box">
 
             <div className="box__img">
-                
-                {/* <div 
-                    style={{backgroundImage: `url(${urlFor(imgurl[0])})`}}
-                    className="img"
-                >
-                </div> */}
 
                 <img
                     src={urlFor(imgurl[0])}
@@ -75,13 +69,13 @@ function Box({data}) {
             
             <section className="box__text">
 
-                <h2 className="box__name f5">
+                <h2 className="box__name f4">
                     {name}
                 </h2>
 
-                <p className="box__desc sm-text">
+                {/* <p className="box__desc text">
                     {desc}
-                </p>
+                </p> */}
 
                 {/* <ul className="box__stack ul sm-text">
                     { stack && stack.map(s => (

@@ -4,15 +4,10 @@
 
     .box__img {
         position: relative;
-        // width: 100%;
-        // aspect-ratio: 1/0.75;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
         .img {
             width: 100%;
-            // height: fit-content;
-            // background-size: contain;
-            // background-repeat: no-repeat;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
         }
 
         .hover {
@@ -60,13 +55,14 @@
 
     .box__name {
         text-transform: capitalize;
-        font-weight: 500;
+        font-weight: 400;
         // letter-spacing: 0.05em;
         margin-block-start: 0.25rem;
     }
 
     .box__desc {
         opacity: 0.9;
+        letter-spacing: 0.015em;
     }
 
     .box__stack {
