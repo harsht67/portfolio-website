@@ -82,7 +82,7 @@
         a {
             font-weight: 700;
             cursor: pointer;
-            margin-inline-end: 0.1rem;
+            margin-inline: 0.25em 0.1rem;
 
             &:hover {
                 text-decoration: underline;
@@ -90,6 +90,5 @@
 
         }
     }
-    
     
 }

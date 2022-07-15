@@ -102,7 +102,14 @@ function About() {
                 </section>
 
                 <p className="about__cv lg-text">
-                    Looking for my <a className="acc-text">CV</a>?
+                    Looking for my 
+                    <a 
+                        target="_blank"
+                        href="https://drive.google.com/file/d/1AxUvTF0HYj9UWJWcpY2efZVYhMhWGXi4/view?usp=sharing"
+                        className="acc-text"
+                    >
+                        CV
+                    </a>?
                 </p>
 
             </InView>
